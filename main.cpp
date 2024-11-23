@@ -1,11 +1,10 @@
-﻿#include "headers/ForwardList.h"
-#include "headers/RationalNumber.h"
-#include "headers/Vector.h"
-#include "headers/List.h"
-#include <iostream>
+﻿#include <iostream>
 #include <optional>
 
-int main()
-{
+#include "include/ForwardList.h"
+#include "include/List.h"
+#include "include/RationalNumber.h"
+#include "include/Set.h"
+#include "include/Vector.h"
 
-}
+int main() {}
