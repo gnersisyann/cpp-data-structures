@@ -2,6 +2,7 @@
 #include <optional>
 
 #include "include/ForwardList.h"
+#include "include/Heap.h"
 #include "include/List.h"
 #include "include/RationalNumber.h"
 #include "include/Set.h"
