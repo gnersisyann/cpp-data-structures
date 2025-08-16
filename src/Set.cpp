@@ -8,9 +8,9 @@ Set::Set() : root_(nullptr), size_(0){};
 
 Set::~Set() { clear(root_); }
 
-bool Set::empty() const { return !root_; }
+bool Set::empty() const noexcept { return !root_; }
 
-int Set::size() const { return size_; }
+int Set::size() const noexcept { return size_; }
 
 Set& Set::operator=(const Set& other)
 {
@@ -39,7 +39,7 @@ bool Set::compareNodes(Node* node1, Node* node2) const
     return compareNodes(node1->left, node2->left) && compareNodes(node1->right, node2->right);
 }
 
-bool Set::operator==(const Set& other)
+bool Set::operator==(const Set& other) const
 {
     if (this->root_ == other.root_) return true;
 
@@ -48,7 +48,7 @@ bool Set::operator==(const Set& other)
     return compareNodes(this->root_, other.root_);
 }
 
-bool Set::operator!=(const Set& other) { return !(*this == other); }
+bool Set::operator!=(const Set& other) const { return !(*this == other); }
 
 Set::Node* Set::copyTree(const Node* node, Node* parent)
 {
@@ -421,9 +421,9 @@ Set::iterator Set::find(int element)
     return end();
 }
 
-bool Set::iterator::operator==(const Set::iterator& right) { return current == right.current; }
+bool Set::iterator::operator==(const Set::iterator& right) const { return current == right.current; }
 
-bool Set::iterator::operator!=(const Set::iterator& right) { return current != right.current; }
+bool Set::iterator::operator!=(const Set::iterator& right) const { return current != right.current; }
 
 Set::iterator& Set::iterator::operator++()
 {

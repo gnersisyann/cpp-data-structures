@@ -4,8 +4,6 @@
 #include <numeric>
 #include <string>
 
-namespace yourname
-{
 template <typename T>
 class RationalNumber
 {
@@ -27,7 +25,7 @@ class RationalNumber
         if (numerator_ < 0 && denominator_ < 0)
         {
             numerator_ *= -1;
-            denominator *= -1;
+            denominator_ *= -1;
         }
         else if (denominator_ < 0)
         {
@@ -124,5 +122,3 @@ class RationalNumber
         return res;
     }
 };
-
-}  // namespace yourname

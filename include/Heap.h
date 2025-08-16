@@ -1,4 +1,5 @@
 #pragma once
+
 #include <algorithm>
 #include <functional>
 #include <iterator>
@@ -52,7 +53,8 @@ void makeHeap(It begin, It end, Compare compare = Compare())
 {
     if (begin == end) return;
     auto n = std::distance(begin, end);
-    for (auto i = begin + (n / 2 - 1); i >= begin; --i)
+    if (n <= 1) return;
+	for (auto i = begin + (n / 2 - 1); i >= begin; --i)
     {
         siftDown(begin, end, i, compare);
     }

@@ -1,5 +1,5 @@
 NAME = program
-FLAGS = -O3
+FLAGS = -O3 -Wall -Wextra -std=c++23 -pedantic
 SRC = main.cpp $(wildcard src/*.cpp)
 OBJ = $(SRC:.cpp=.o)
 GCC = g++

@@ -1,4 +1,5 @@
 #pragma once
+
 #include <initializer_list>
 #include <iostream>
 
@@ -46,8 +47,8 @@ class Set
         iterator& operator++();
         iterator operator++(int);
 
-        bool operator==(const iterator& right);
-        bool operator!=(const iterator& right);
+        bool operator==(const iterator& right) const;
+        bool operator!=(const iterator& right) const;
 
         Node* min(Node* node);
 
@@ -56,8 +57,8 @@ class Set
 
     Set& operator=(const Set& right);
 
-    bool operator==(const Set& right);
-    bool operator!=(const Set& right);
+    bool operator==(const Set& right) const;
+    bool operator!=(const Set& right) const;
 
     void clear(Node* node);
 
@@ -75,8 +76,8 @@ class Set
     void insert(int element);
     void erase(int element);
     bool contains(int element) const;
-    bool empty() const;
-    int size() const;
+    bool empty() const noexcept;
+    int size() const noexcept;
 
     iterator begin();
     iterator end();
